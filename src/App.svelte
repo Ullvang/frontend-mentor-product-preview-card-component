@@ -1,5 +1,6 @@
 <script>
   import Footer from "./lib/Footer.svelte";
+  import IconCart from "./assets/icon-cart.svg";
 </script>
 
 <main>
@@ -8,7 +9,11 @@
       media="(max-width:700px)"
       srcset="/images/image-product-mobile.jpg"
     />
-    <img src="/images/image-product-desktop.jpg" alt="chanel perfume" />
+    <img
+      id="chanel"
+      src="/images/image-product-desktop.jpg"
+      alt="chanel perfume"
+    />
   </picture>
   <div id="text">
     <p id="overline">Perfume</p>
@@ -21,7 +26,9 @@
       $149.99
       <span>$169.99</span>
     </p>
-    <button> Add to Cart </button>
+    <button
+      ><img id="icon-cart" src={IconCart} alt="icon cart" />Add to Cart</button
+    >
   </div>
 </main>
 <Footer />
@@ -37,7 +44,7 @@
     margin: 28px 16px;
     grid-row-start: 2;
   }
-  img,
+  #chanel,
   picture {
     max-width: 300px;
   }
@@ -48,7 +55,14 @@
     border-radius: 8px;
     padding: 15px 62px 15px 63px;
     width: 100%;
+    font-size: 14px;
   }
+
+  #icon-cart {
+    margin-right: 11.62px;
+    vertical-align: middle;
+  }
+
   button:hover {
     background-color: var(--deep-aquamaringe);
   }
@@ -97,7 +111,7 @@
       min-height: 611px;
       grid-row-start: 1;
     }
-    img {
+    #chanel {
       max-width: 100%;
       height: 240px;
       object-fit: cover;
