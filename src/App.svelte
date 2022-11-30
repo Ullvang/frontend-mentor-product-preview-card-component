@@ -56,6 +56,7 @@
     padding: 15px 62px 15px 63px;
     width: 100%;
     font-size: 14px;
+    font-weight: bold;
   }
 
   #icon-cart {
