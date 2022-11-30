@@ -1,0 +1,59 @@
+:root {
+  /* ### Primary */
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --deep-aquamaringe: hsl(157, 43%, 18%);
+  /* ### Neutral */
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  --fraunces: "Fraunces", serif;
+  --montserrat: "Montserrat", sans-serif;
+}
+
+* {
+  font-family: var(--montserrat);
+}
+
+body,
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+body {
+  background-color: var(--cream);
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+h1 {
+  font-family: var(--fraunces);
+  font-weight: bold;
+  line-height: 32px;
+  margin-bottom: 24px;
+}
+
+p {
+  font-size: 14px;
+  color: var(--dark-grayish-blue);
+}
+
+#app {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 700px) {
+  #app {
+    grid-template-rows: auto 1fr;
+  }
+}
